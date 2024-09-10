@@ -1,0 +1,62 @@
+header{
+    padding: 10px;
+    border-bottom: 1px solid ;
+}
+header nav{
+    border-radius: 25px;
+    
+}
+#liO{
+    position: none;
+    animation: animeD 2.5s ease-in;
+}
+#liA{
+    position: none;
+    animation: anime 1s ease-in;
+}
+#liB{
+    position: none;
+    animation: anime 1.5s ease-in;
+}
+#liC{
+    position: none;
+    animation: anime 2s ease-in;
+}
+#liD{
+    position: none;
+    animation: animeA 2.5s ease-in;
+}
+@keyframes anime {
+    from{
+        opacity: 0;
+        position: absolute;
+    }
+    to{
+        opacity: 1;
+        position: none;
+    }
+    
+}
+@keyframes animeD {
+    from{
+       transform: rotateZ(0deg);
+       position: absolute;
+    }
+    to{
+        
+        transform: rotateZ(360deg);
+        position: none;
+    }
+    
+}
+@keyframes animeA {
+    from{
+       
+        opacity: 0;
+    }
+    to{
+       
+        opacity: 1;
+    }
+    
+}

@@ -1,25 +1,30 @@
-import logo from './logo.svg';
-import './App.css';
+import ReactDOM from "react-dom/client";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Layout from "./pages/Layout";
+import Home from "./pages/Home";
+import Notes from "./pages/Notes";
+import OurLab from "./pages/OurLab";
+import Community from "./pages/Community";
+import Contact from "./pages/Contact";
+import NoPage from "./pages/NoPage";
+import Base from "./pages/Base";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="Base" element={<Base />} />
+          <Route path="Community" element={<Community />} />
+          <Route path="Notes" element={<Notes />} />
+          <Route path="OurLab" element={<OurLab />} />
+          <Route path="*" element={<NoPage />} />
+        </Route>
+      </Routes>
+    </BrowserRouter>
   );
 }
+
 
 export default App;
